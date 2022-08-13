@@ -1,0 +1,432 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+
+@font-face {
+    font-family: "ROMANA";
+    src: url(../fonts/RomanSD.ttf)
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#todo{
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 05% auto auto;
+
+   grid-area: auto;
+}
+
+:root {
+    --color1:#9ed930;
+    --color2:#2A558C;
+    --color3:#182940;
+    --color4:#9FADBF;
+    --color5:#D0DFF2;
+    --color-blanco:#ffffff;
+    --color-negro:#000000;
+    --color-gris-oscuro:#454545;
+ }
+ 
+body{
+   background-color: #AEC3A2;
+}
+
+p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+ }
+ 
+a {
+    color: var(--color1);
+    text-decoration: none;
+ }
+
+  
+ h1{
+   text-align: center;
+   font-size: 50px;
+   font-family: "ROMANA";
+ }
+
+ /* Selectores de tipo ID */
+
+#menu-superior {
+    background-color: var(--color-negro);
+    font-size: 0.8em;
+ }
+ 
+ #menu-superior a {
+    color: var(--color5);
+    padding: 5px 10px;
+    transition: all 0.3s ease-in-out;
+ }
+ 
+ #menu-superior a:hover {
+    background-color: var(--color5);
+    color: var(--color3);
+ }
+ 
+ #menu-superior .fila {
+    justify-content: space-between;
+ }
+ 
+ #cabecera {
+    background-color: var(--color-blanco);
+    color: var(--color3);
+ }
+
+ /* Afecta únicamente a los párrafos de la cabecera */
+#cabecera p {
+   margin-bottom: 0;
+}
+
+#cabecera #logo {
+   width: 300px;
+}
+
+#cabecera #menu-principal a {
+   padding: 30px 15px;
+   color: var(--color3);
+   border-bottom: solid 4px transparent;
+   transition: all 0.3s ease-in-out;
+}
+
+#cabecera #menu-principal a:hover {
+   color: var(--color1);
+   border-bottom: solid 4px var(--color1);
+}
+
+#cabecera .fila {
+   /* Alinea las cajas hijo del flexbox a los extremos izquierdo y derecho */
+   justify-content: space-between;
+}
+
+#pie{
+   background-color: var(--color-blanco);
+   color: var(--color-negro);
+}
+
+#pie1{
+   text-align: center;
+   text-align-last: center;
+}
+
+#pie p{
+   text-align: justify;
+   font-weight: bold;
+   margin-bottom: 10px;
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 20px;
+}
+
+#tienda {
+   background-color:#dcebd4;
+   color: var(--color-negro);
+   text-align: center;
+}
+
+#tienda-alig {
+   background-color: var(--color-blanco);
+   color: var(--color-gris-oscuro);
+   text-align: center;
+   margin-bottom: 20px;
+}
+
+
+#tienda p {
+   color: var(--color-blanco);
+   text-align: center;
+   padding-bottom: 5px;
+}
+
+
+#tienda-contenedor-foto {
+   position: relative;
+}
+
+#tienda1 {
+   background-color:#dcebd4;
+   color: var(--color-negro);
+   text-align: center;
+}
+
+/****** ESTILOS GENERALES PARA EL MENU (aplicado a la lista de viñetas) *****/
+
+.menu-barra {
+    list-style-type: none; /* Quita la viñeta */
+    display: flex; 
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ }
+ 
+ .menu-barra a {
+    display: block;
+ }
+ 
+ /* Selectores de tipo CLASS */
+
+ .contenedor {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+ }
+
+
+ .espaciado{
+   padding-top: 50px;
+   padding-bottom: 50px;
+ }
+ 
+ .fila {
+    display: flex;
+
+    margin-left: -15px;
+    margin-right: -15px;
+ }
+
+ .fila1 {
+   display: flex;
+}
+
+ .columna {
+   flex-basis: 0;
+   flex-grow: 1;
+   padding-left: 15px;
+   padding-right: 15px;
+ }
+
+ 
+ .img-ajustar {
+    width: 100%; /* Permite ajustar el ancho de la imagen al ancho de la caja padre */
+    height: auto; /* Ajusta proporcionalmente la altura según el ancho */
+ }
+
+ .img-ajustar3 {
+   
+   width: 100%; /* Permite ajustar el ancho de la imagen al ancho de la caja padre */
+   height: auto; /* Ajusta proporcionalmente la altura según el ancho */
+}
+ 
+ .alinear-vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+ }
+ 
+ .cabecera-sticky {
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+ }
+
+.bi-bag-heart-fill{
+    color: #9ed930;
+    font-size: 50px;
+    display: block;
+    width: 00px;
+    height: 60px;
+    position: relative;
+    bottom: 50px;
+    left: 1300px;
+} 
+
+
+.primera-imagen{
+   position: absolute;
+
+}
+
+.titulos {
+    text-align: center;
+    font-family: "ROMANA";
+}
+.titulos section {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;    position: relative;
+}
+
+.titulos section h1{
+    position: relative;
+    left: 0px;
+    bottom: 0px;
+    padding: 10px;
+   
+}
+
+.titulos section p {
+    display: flex;
+    margin: 2rem auto;
+    width: 15%;
+    padding-left: 2000px;
+    position: relative;
+    padding: 30px;
+    bottom: 18px;
+    color: rgba(5, 5, 5, 0.805)
+}
+
+.titulos section img {
+    display: inline;
+    margin: 50px auto;
+}
+
+
+
+@font-face {
+    font-family: "norse";
+    src: url(../fonts/Norse.otf)
+}
+
+/* Mujer */
+
+.menu{
+   display: flex;
+   flex-direction: column;
+   
+}
+
+.menu-categorias {
+   display: flex;
+   flex-direction: row;
+   color: var(--color-negro);
+   padding: 25px;
+   font-size: 50px;
+}
+
+.camisetas {
+   display: flex;
+    margin: 2rem auto;
+    width: 35%;
+    padding-left: 2000px;
+    position: relative;
+    padding: 30px;
+    bottom: 980px;
+    right: 250px;
+}
+
+.pantalon {
+   display: flex;
+    margin: 0px auto;
+    width: 55%;
+    padding-left: 10px;
+    position: flex;
+    padding: 40px;
+    bottom: 158px;
+    color: rgba(5, 5, 5, 0.805)
+}
+
+/* Formulario */
+
+.form-register {
+   width: 300px;
+   background: #e5f3dd;
+   padding: 90px;
+   margin: auto;
+   margin-top: 15px;
+   border-radius: 10px;
+
+}
+
+.form-register h3 {
+   font-size:  40px;
+   margin-bottom: 30px;
+
+}
+
+.controles {
+   width: 250px;
+   background: var(--color-blanco);
+   padding: 15px;
+   border-radius: 5px;
+   margin-bottom: 15px;
+   border: 2px solid cornflowerblue;
+}
+
+.form-register .botones {
+   width: 300px;
+   background: #9ed930;
+   border: none;
+   padding: 15px;
+   color: var(--color-blanco);
+}
+
+/* Codigo responsive para celular (320px) */
+@media screen and (max-width:320px) {
+   .contenedor {
+      max-width: 90%;
+   }
+
+   h1 {
+      font-size: 1em;
+   }
+
+   #valores .fila {
+      /* Permite que las cajas hijo se alineen 
+      automaticamente en varias filas cuando alcancen
+      mostrarse en pantalla */
+      flex-wrap: wrap;
+      justify-content: center;
+   }
+
+   #cabecera .fila {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   }
+
+   #cabecera #menu-principal a {
+      padding: 10px 10px;
+   }
+
+   #cabecera #logo img {
+      width: 80%;
+      margin: auto;
+   }
+
+   #menu-principal .menu-barra {
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+   } 
+   #pie .fila1 {
+      margin: 20px 0;
+      flex-wrap: wrap;
+      justify-content: center;
+   }
+
+   #tienda {
+      flex-wrap: wrap;
+      margin: -40px 0;
+   }
+
+   #tienda1 {
+      margin: -50px 0;
+   }
+
+   #tienda-contenedor-foto{
+      flex-wrap: wrap;
+   }
+   ul {
+      position: relative;
+      width: 100%;
+      top: -40px;
+      text-align: center;
+   }
+   nav ul li a {
+      font-size: 0.7em;
+      margin: -5px 0;
+   }
+
+   #pie p {
+      font-size: 0.7em;
+   }
+
+
+
+
+} /* Codigo responsive para tableta (320px) */
