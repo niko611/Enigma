@@ -12,13 +12,33 @@
     padding: 0;
 }
 
-#todo{
+/* #todo{
    display: grid;
    grid-template-columns: 1fr;
    grid-template-rows: 05% auto auto;
 
    grid-area: auto;
-}
+} */
+
+.burger {
+   width: 03px;
+   cursor: pointer;
+   display: block;
+   
+ }
+ .burger img {
+   width:800%;
+ }
+ .toggle-open.open {
+   display: none;
+ }
+ .toggle-close {
+   display: none;
+ }
+ .toggle-close.close {
+   display: block;
+ }
+ 
 
 :root {
     --color1:#9ed930;
@@ -158,64 +178,64 @@ a {
 
 .menu-barra {
     list-style-type: none; /* Quita la viñeta */
-    display: flex; 
-    font-size: 20px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
- }
- 
- .menu-barra a {
-    display: block;
- }
- 
+   display: flex; 
+   font-size: 20px;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.menu-barra a {
+display: block;
+}
+
  /* Selectores de tipo CLASS */
 
- .contenedor {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: justify;
- }
+.contenedor {
+   max-width: 1200px;
+   margin-left: auto;
+   margin-right: auto;
+   text-align: justify;
+}
 
 
- .espaciado{
+.espaciado{
    padding-top: 50px;
    padding-bottom: 50px;
- }
- 
- .fila {
-    display: flex;
+}
 
-    margin-left: -15px;
-    margin-right: -15px;
- }
+.fila {
+   display: flex;
 
- .fila1 {
+   margin-left: -15px;
+   margin-right: -15px;
+}
+
+.fila1 {
    display: flex;
 }
 
- .columna {
+.columna {
    flex-basis: 0;
    flex-grow: 1;
    padding-left: 15px;
    padding-right: 15px;
- }
+}
 
- 
- .img-ajustar {
+
+.img-ajustar {
     width: 100%; /* Permite ajustar el ancho de la imagen al ancho de la caja padre */
     height: auto; /* Ajusta proporcionalmente la altura según el ancho */
- }
+}
 
- .img-ajustar3 {
+.img-ajustar3 {
    
    width: 100%; /* Permite ajustar el ancho de la imagen al ancho de la caja padre */
    height: auto; /* Ajusta proporcionalmente la altura según el ancho */
 }
  
  .alinear-vertical {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
  }
  
  .cabecera-sticky {
@@ -243,43 +263,43 @@ a {
 }
 
 .titulos {
-    text-align: center;
-    font-family: "ROMANA";
+   text-align: center;
+   font-family: "ROMANA";
 }
 .titulos section {
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;    position: relative;
+   font-size: 20px;
+   font-family: Arial, Helvetica, sans-serif;    position: relative;
 }
 
 .titulos section h1{
-    position: relative;
-    left: 0px;
-    bottom: 0px;
-    padding: 10px;
+   position: relative;
+   left: 0px;
+   bottom: 0px;
+   padding: 10px;
    
 }
 
 .titulos section p {
-    display: flex;
-    margin: 2rem auto;
-    width: 15%;
-    padding-left: 2000px;
-    position: relative;
-    padding: 30px;
-    bottom: 18px;
-    color: rgba(5, 5, 5, 0.805)
+   display: flex;
+   margin: 2rem auto;
+   width: 15%;
+   padding-left: 2000px;
+   position: relative;
+   padding: 30px;
+   bottom: 18px;
+   color: rgba(5, 5, 5, 0.805)
 }
 
 .titulos section img {
-    display: inline;
-    margin: 50px auto;
+   display: inline;
+   margin: 50px auto;
 }
 
 
 
 @font-face {
-    font-family: "norse";
-    src: url(../fonts/Norse.otf)
+   font-family: "norse";
+   src: url(../fonts/Norse.otf)
 }
 
 /* Mujer */
@@ -300,24 +320,24 @@ a {
 
 .camisetas {
    display: flex;
-    margin: 2rem auto;
-    width: 35%;
-    padding-left: 2000px;
-    position: relative;
-    padding: 30px;
-    bottom: 980px;
-    right: 250px;
+   margin: 2rem auto;
+   width: 35%;
+   padding-left: 2000px;
+   position: relative;
+   padding: 30px;
+   bottom: 980px;
+   right: 250px;
 }
 
 .pantalon {
    display: flex;
-    margin: 0px auto;
-    width: 55%;
-    padding-left: 10px;
-    position: flex;
-    padding: 40px;
-    bottom: 158px;
-    color: rgba(5, 5, 5, 0.805)
+   margin: 0px auto;
+   width: 55%;
+   padding-left: 10px;
+   position: flex;
+   padding: 40px;
+   bottom: 158px;
+   color: rgba(5, 5, 5, 0.805)
 }
 
 /* Formulario */
@@ -375,7 +395,8 @@ a {
 
    #cabecera .fila {
       flex-direction: column;
-      justify-content: center;
+      gap: 50px;
+      justify-content: space-between;
       align-items: center;
    }
 
@@ -384,7 +405,7 @@ a {
    }
 
    #cabecera #logo img {
-      width: 80%;
+      width: 50%;
       margin: auto;
    }
 
@@ -426,7 +447,77 @@ a {
       font-size: 0.7em;
    }
 
+/* MENU HAMBURGUESA  */
 
+.burger{
+   display: none;
+   flex-direction: row;
+   justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FORMULARIO RESPONSIVE */
+
+#formulario{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   
+   
+}
+
+   .form-register {
+      width: 100px;
+      background: #e5f3dd;
+      padding: 100px;
+      margin: auto;
+      margin-top: 10px;
+      border-radius: 10px;
+   
+   }
+   
+   .form-register h3 {
+      font-size:  30px;
+      margin-bottom: 30px;
+   
+   }
+   
+   .controles {
+      width: 250px;
+      background: var(--color-blanco);
+      padding: 15px;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      border: 2px solid rgb(14, 98, 255);
+   }
+
+   #formulario p{
+      display: flex;
+      flex-direction: column;
+
+   }
+   
+   .form-register .botones {
+      width: 250px;
+      background: #9ed930;
+      border: none;
+      padding: 15px;
+      color: var(--color-blanco);
+   }
+
+   
 
 
 } /* Codigo responsive para tableta (320px) */
