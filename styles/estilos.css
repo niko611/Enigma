@@ -304,41 +304,18 @@ display: block;
 
 /* Mujer */
 
-.menu{
-   display: flex;
-   flex-direction: column;
-   
+#mujer{
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: auto;
+
 }
 
-.menu-categorias {
-   display: flex;
-   flex-direction: row;
-   color: var(--color-negro);
-   padding: 25px;
-   font-size: 50px;
+.borde{
+   border-top: solid black 03px;
+   border-bottom: solid black 03px;
 }
 
-.camisetas {
-   display: flex;
-   margin: 2rem auto;
-   width: 35%;
-   padding-left: 2000px;
-   position: relative;
-   padding: 30px;
-   bottom: 980px;
-   right: 250px;
-}
-
-.pantalon {
-   display: flex;
-   margin: 0px auto;
-   width: 55%;
-   padding-left: 10px;
-   position: flex;
-   padding: 40px;
-   bottom: 158px;
-   color: rgba(5, 5, 5, 0.805)
-}
 
 /* Formulario */
 
@@ -394,10 +371,10 @@ display: block;
    }
 
    #cabecera .fila {
-      flex-direction: column;
+      flex-direction: row;
       gap: 50px;
       justify-content: space-between;
-      align-items: center;
+      align-items: row;
    }
 
    #cabecera #menu-principal a {
@@ -454,19 +431,6 @@ display: block;
    flex-direction: row;
    justify-content: center;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* FORMULARIO RESPONSIVE */
 
