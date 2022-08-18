@@ -12,13 +12,7 @@
     padding: 0;
 }
 
-/* #todo{
-   display: grid;
-   grid-template-columns: 1fr;
-   grid-template-rows: 05% auto auto;
 
-   grid-area: auto;
-} */
 
 .burger {
    width: 03px;
@@ -52,7 +46,7 @@
  }
  
 body{
-   background-color: #AEC3A2;
+   background-image: radial-gradient(#A1FFCE,#FAFFD1);
 }
 
 p {
@@ -96,7 +90,7 @@ a {
  
  #cabecera {
     background-color: var(--color-blanco);
-    color: var(--color3);
+    color: var(--color);
  }
 
  /* Afecta únicamente a los párrafos de la cabecera */
@@ -143,38 +137,17 @@ a {
    font-size: 20px;
 }
 
-#tienda {
-   background-color:#dcebd4;
-   color: var(--color-negro);
-   text-align: center;
-}
+section{
 
-#tienda-alig {
-   background-color: var(--color-blanco);
-   color: var(--color-gris-oscuro);
-   text-align: center;
-   margin-bottom: 20px;
+   background-image: linear-gradient(to left green, yellow);
 }
 
 
-#tienda p {
-   color: var(--color-blanco);
-   text-align: center;
-   padding-bottom: 5px;
-}
 
-
-#tienda-contenedor-foto {
-   position: relative;
-}
-
-#tienda1 {
-   background-color:#dcebd4;
-   color: var(--color-negro);
-   text-align: center;
-}
 
 /****** ESTILOS GENERALES PARA EL MENU (aplicado a la lista de viñetas) *****/
+
+
 
 .menu-barra {
     list-style-type: none; /* Quita la viñeta */
@@ -186,6 +159,22 @@ a {
 .menu-barra a {
 display: block;
 }
+
+.menu-vertilcal{
+   position: absolute;
+   display: none;
+   list-style: none;
+   width: 200px;
+   background-color: rgb(142, 255, 150);
+   padding: 20px;
+   margin: 20px;
+}
+
+.menu-barra li:hover .menu-vertilcal{
+   display: block;
+}
+
+
 
  /* Selectores de tipo CLASS */
 
@@ -226,75 +215,60 @@ display: block;
     height: auto; /* Ajusta proporcionalmente la altura según el ancho */
 }
 
-.img-ajustar3 {
-   
-   width: 100%; /* Permite ajustar el ancho de la imagen al ancho de la caja padre */
-   height: auto; /* Ajusta proporcionalmente la altura según el ancho */
+/* TRANSFORMACIONES Y TRANSICIONES 2D */
+
+.img-ajustar2{
+   width: 100%;
+   height: auto;
+   transition: width 2s 1ss;
 }
- 
+
+.img-ajustar2:hover{
+   transform: rotate(05deg);
+}
+.img-ajustar3:hover{
+   transform: rotate(05deg);
+
+   -webkit-transform: rotate(0) scale(1);
+	transform: rotate(0) scale(1);
+}
+
+.img-ajustar3 {
+   width: 60%; /* Permite ajustar el ancho de la imagen al ancho de la caja padre */
+   height: auto; /* Ajusta proporcionalmente la altura según el ancho */
+   transition: width 2s 1ss;
+
+   -webkit-transform: rotate(15deg) scale(1.4);
+	transform: rotate(15deg) scale(1.3);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+#tienda{
+   padding: 60px;
+}
+
+#tienda1{
+   padding: 60px;
+}
+
  .alinear-vertical {
    display: flex;
    flex-direction: column;
    justify-content: center;
  }
  
- .cabecera-sticky {
-    position: sticky;
-    top: 0px;
-    left: 0px;
-    z-index: 1000;
- }
-
-.bi-bag-heart-fill{
-    color: #9ed930;
-    font-size: 50px;
-    display: block;
-    width: 00px;
-    height: 60px;
-    position: relative;
-    bottom: 50px;
-    left: 1300px;
-} 
-
 
 .primera-imagen{
    position: absolute;
 
 }
 
-.titulos {
-   text-align: center;
-   font-family: "ROMANA";
-}
-.titulos section {
-   font-size: 20px;
-   font-family: Arial, Helvetica, sans-serif;    position: relative;
-}
-
-.titulos section h1{
-   position: relative;
-   left: 0px;
-   bottom: 0px;
-   padding: 10px;
-   
-}
-
-.titulos section p {
+.titulo-de-imagen{
    display: flex;
-   margin: 2rem auto;
-   width: 15%;
-   padding-left: 2000px;
-   position: relative;
-   padding: 30px;
-   bottom: 18px;
-   color: rgba(5, 5, 5, 0.805)
+   flex-direction: row;
+   justify-content: center;
 }
-
-.titulos section img {
-   display: inline;
-   margin: 50px auto;
-}
-
 
 
 @font-face {
@@ -306,23 +280,57 @@ display: block;
 
 #mujer{
    display: grid;
+
+   grid-area: 
+   "header header header"
+   "catego images"
+   "footer";
+
    grid-template-columns: 1fr;
-   grid-template-rows: auto;
+   grid-template-rows: 10% 70% 30%;
+
+
 
 }
 
-.borde{
+/* LINEA DEL TITULO */
+.borde{      
    border-top: solid black 03px;
    border-bottom: solid black 03px;
 }
 
+.categorias{
+   font-size: 60px;
+   margin: 20px;
+}
+
+
+
+/* LISTA DE CATEGORIAS */
+.lista{
+   font-size: 30px;
+   padding: 40px;
+   margin: 20px;
+}
+
+
+/* TAMAÑO Y POSICION DE LOS BOTONES DE TALLA */
+.tallas{
+   padding: 10px;
+   font-size: 23px;
+}
+
+.talle{
+   padding: 10px;
+   font-size: 23px;
+}
 
 /* Formulario */
 
 .form-register {
    width: 300px;
-   background: #e5f3dd;
    padding: 90px;
+   background-image: linear-gradient(#00467F,#A5CC82 );
    margin: auto;
    margin-top: 15px;
    border-radius: 10px;
@@ -485,3 +493,6 @@ display: block;
 
 
 } /* Codigo responsive para tableta (320px) */
+
+
+/* TRANSFORMACIONES Y TRANSICIONES */
